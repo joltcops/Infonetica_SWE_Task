@@ -1,0 +1,18 @@
+{
+  "id": "approval-workflow",
+  "name": "Approval Workflow",
+  "states": [
+    {"id": "draft", "name": "Draft", "isInitial": true, "isFinal": false, "enabled": true},
+    {"id": "approved", "name": "Approved", "isInitial": false, "isFinal": true, "enabled": true}
+  ],
+  "actions": [
+    {
+      "id": "approve",
+      "name": "Approve",
+      "enabled": true,
+      "fromStates": ["draft"],
+      "toState": "approved"
+    }
+  ]
+}
+
